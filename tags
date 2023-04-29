@@ -1,0 +1,147 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+ARCH	Makefile	/^ARCH    = $(CROSS)ar$/;"	m
+ASMS	Makefile	/^ASMS = start.S vector.S\\$/;"	m
+BUILD_DIR	Makefile	/^BUILD_DIR       = build$/;"	m
+CC	Makefile	/^CC      = $(CROSS)gcc$/;"	m
+CFLAGS	Makefile	/^CFLAGS  = -march=rv32imac_zicsr -mabi=ilp32 -mcmodel=medany \\$/;"	m
+CLINT_ADDR	riscv-virt.h	40;"	d
+CLINT_MSIP	riscv-virt.h	41;"	d
+CLINT_MTIME	riscv-virt.h	43;"	d
+CLINT_MTIMECMP	riscv-virt.h	42;"	d
+CONS	riscv-virt.h	33;"	d
+CONS	riscv-virt.h	35;"	d
+CPPFLAGS	Makefile	/^CPPFLAGS = \\$/;"	m
+CROSS	Makefile	/^CROSS   = riscv64-unknown-elf-$/;"	m
+DEMO_BLINKY	main.c	32;"	d	file:
+DEMO_SOURCE_DIR	Makefile	/^DEMO_SOURCE_DIR = $(abspath ..\/Common\/Minimal)$/;"	m
+DEPS	Makefile	/^DEPS = $(SRCS:%.c=$(BUILD_DIR)\/%.d) $(ASMS:%.S=$(BUILD_DIR)\/%.d)$/;"	m
+FREERTOS_CONFIG_H	FreeRTOSConfig.h	28;"	d
+INCLUDE_eTaskGetState	FreeRTOSConfig.h	99;"	d
+INCLUDE_uxTaskPriorityGet	FreeRTOSConfig.h	93;"	d
+INCLUDE_vTaskCleanUpResources	FreeRTOSConfig.h	95;"	d
+INCLUDE_vTaskDelay	FreeRTOSConfig.h	98;"	d
+INCLUDE_vTaskDelayUntil	FreeRTOSConfig.h	97;"	d
+INCLUDE_vTaskDelete	FreeRTOSConfig.h	94;"	d
+INCLUDE_vTaskPrioritySet	FreeRTOSConfig.h	92;"	d
+INCLUDE_vTaskSuspend	FreeRTOSConfig.h	96;"	d
+INCLUDE_xSemaphoreGetMutexHolder	FreeRTOSConfig.h	104;"	d
+INCLUDE_xTaskAbortDelay	FreeRTOSConfig.h	101;"	d
+INCLUDE_xTaskGetCurrentTaskHandle	FreeRTOSConfig.h	102;"	d
+INCLUDE_xTaskGetHandle	FreeRTOSConfig.h	103;"	d
+INCLUDE_xTimerPendFunctionCall	FreeRTOSConfig.h	100;"	d
+IRQ_0	vector.S	/^IRQ_0:$/;"	l
+IRQ_1	vector.S	/^IRQ_1:$/;"	l
+IRQ_10	vector.S	/^IRQ_10:$/;"	l
+IRQ_11	vector.S	/^IRQ_11:$/;"	l
+IRQ_12	vector.S	/^IRQ_12:$/;"	l
+IRQ_13	vector.S	/^IRQ_13:$/;"	l
+IRQ_14	vector.S	/^IRQ_14:$/;"	l
+IRQ_15	vector.S	/^IRQ_15:$/;"	l
+IRQ_2	vector.S	/^IRQ_2:$/;"	l
+IRQ_3	vector.S	/^IRQ_3:$/;"	l
+IRQ_4	vector.S	/^IRQ_4:$/;"	l
+IRQ_5	vector.S	/^IRQ_5:$/;"	l
+IRQ_6	vector.S	/^IRQ_6:$/;"	l
+IRQ_7	vector.S	/^IRQ_7:$/;"	l
+IRQ_8	vector.S	/^IRQ_8:$/;"	l
+IRQ_9	vector.S	/^IRQ_9:$/;"	l
+LDFLAGS	Makefile	/^LDFLAGS = -nostartfiles -Tfake_rom.lds \\$/;"	m
+LOAD	riscv-reg.h	33;"	d
+LOAD	riscv-reg.h	38;"	d
+LSR_BI	ns16550.c	50;"	d	file:
+LSR_DR	ns16550.c	46;"	d	file:
+LSR_EIRF	ns16550.c	53;"	d	file:
+LSR_FE	ns16550.c	49;"	d	file:
+LSR_OE	ns16550.c	47;"	d	file:
+LSR_PE	ns16550.c	48;"	d	file:
+LSR_TEMT	ns16550.c	52;"	d	file:
+LSR_THRE	ns16550.c	51;"	d	file:
+NS16550_ADDR	riscv-virt.h	45;"	d
+NS16550_H_	ns16550.h	28;"	d
+OBJCOPY	Makefile	/^OBJCOPY = $(CROSS)objcopy$/;"	m
+OBJS	Makefile	/^OBJS = $(SRCS:%.c=$(BUILD_DIR)\/%.o) $(ASMS:%.S=$(BUILD_DIR)\/%.o)$/;"	m
+PRIM_HART	riscv-virt.h	38;"	d
+REGSHIFT	riscv-reg.h	32;"	d
+REGSHIFT	riscv-reg.h	37;"	d
+REGSIZE	riscv-reg.h	31;"	d
+REGSIZE	riscv-reg.h	36;"	d
+REG_BRDH	ns16550.c	43;"	d	file:
+REG_BRDL	ns16550.c	42;"	d	file:
+REG_FCR	ns16550.c	36;"	d	file:
+REG_IER	ns16550.c	34;"	d	file:
+REG_IIR	ns16550.c	35;"	d	file:
+REG_LCR	ns16550.c	37;"	d	file:
+REG_LSR	ns16550.c	39;"	d	file:
+REG_MCR	ns16550.c	38;"	d	file:
+REG_MSR	ns16550.c	40;"	d	file:
+REG_RBR	ns16550.c	32;"	d	file:
+REG_SCR	ns16550.c	41;"	d	file:
+REG_THR	ns16550.c	33;"	d	file:
+RISCV_REG_H_	riscv-reg.h	28;"	d
+RISCV_VIRT_H_	riscv-virt.h	28;"	d
+RTOS_SOURCE_DIR	Makefile	/^RTOS_SOURCE_DIR = $(abspath ..\/..\/Source)$/;"	m
+SRCS	Makefile	/^SRCS = main.c main_blinky.c riscv-virt.c ns16550.c \\$/;"	m
+STOR	riscv-reg.h	34;"	d
+STOR	riscv-reg.h	39;"	d
+_start	start.S	/^_start:$/;"	l
+addr	ns16550.h	/^	uintptr_t addr;$/;"	m	struct:device
+configASSERT	FreeRTOSConfig.h	73;"	d
+configASSERT_DEFINED	FreeRTOSConfig.h	72;"	d
+configCHECK_FOR_STACK_OVERFLOW	FreeRTOSConfig.h	62;"	d
+configCPU_CLOCK_HZ	FreeRTOSConfig.h	51;"	d
+configGENERATE_RUN_TIME_STATS	FreeRTOSConfig.h	67;"	d
+configIDLE_SHOULD_YIELD	FreeRTOSConfig.h	59;"	d
+configISR_STACK_SIZE_WORDS	FreeRTOSConfig.h	83;"	d
+configMAX_PRIORITIES	FreeRTOSConfig.h	53;"	d
+configMAX_TASK_NAME_LEN	FreeRTOSConfig.h	56;"	d
+configMINIMAL_STACK_SIZE	FreeRTOSConfig.h	54;"	d
+configMTIMECMP_BASE_ADDRESS	FreeRTOSConfig.h	46;"	d
+configMTIME_BASE_ADDRESS	FreeRTOSConfig.h	45;"	d
+configQUEUE_REGISTRY_SIZE	FreeRTOSConfig.h	61;"	d
+configTICK_RATE_HZ	FreeRTOSConfig.h	52;"	d
+configTIMER_QUEUE_LENGTH	FreeRTOSConfig.h	79;"	d
+configTIMER_TASK_PRIORITY	FreeRTOSConfig.h	78;"	d
+configTIMER_TASK_STACK_DEPTH	FreeRTOSConfig.h	80;"	d
+configTOTAL_HEAP_SIZE	FreeRTOSConfig.h	55;"	d
+configUSE_16_BIT_TICKS	FreeRTOSConfig.h	58;"	d
+configUSE_APPLICATION_TASK_TAG	FreeRTOSConfig.h	65;"	d
+configUSE_COUNTING_SEMAPHORES	FreeRTOSConfig.h	66;"	d
+configUSE_IDLE_HOOK	FreeRTOSConfig.h	49;"	d
+configUSE_MALLOC_FAILED_HOOK	FreeRTOSConfig.h	64;"	d
+configUSE_MUTEXES	FreeRTOSConfig.h	60;"	d
+configUSE_PORT_OPTIMISED_TASK_SELECTION	FreeRTOSConfig.h	68;"	d
+configUSE_PREEMPTION	FreeRTOSConfig.h	48;"	d
+configUSE_RECURSIVE_MUTEXES	FreeRTOSConfig.h	63;"	d
+configUSE_TICK_HOOK	FreeRTOSConfig.h	50;"	d
+configUSE_TIMERS	FreeRTOSConfig.h	77;"	d
+configUSE_TRACE_FACILITY	FreeRTOSConfig.h	57;"	d
+device	ns16550.h	/^struct device {$/;"	s
+freertos_vector_table	vector.S	/^freertos_vector_table:$/;"	l
+handle_trap	riscv-virt.c	/^void handle_trap(void)$/;"	f
+main	main.c	/^int main( void )$/;"	f
+mainQUEUE_LENGTH	main_blinky.c	51;"	d	file:
+mainQUEUE_RECEIVE_TASK_PRIORITY	main_blinky.c	38;"	d	file:
+mainQUEUE_SEND_FREQUENCY_MS	main_blinky.c	43;"	d	file:
+mainQUEUE_SEND_TASK_PRIORITY	main_blinky.c	39;"	d	file:
+mainVECTOR_MODE_DIRECT	main.c	33;"	d	file:
+main_blinky	main_blinky.c	/^int main_blinky( void )$/;"	f
+prvQueueReceiveTask	main_blinky.c	/^static void prvQueueReceiveTask( void *pvParameters )$/;"	f	file:
+prvQueueSendTask	main_blinky.c	/^static void prvQueueSendTask( void *pvParameters )$/;"	f	file:
+readb	ns16550.c	/^static uint8_t readb( uintptr_t addr )$/;"	f	file:
+secondary	start.S	/^secondary:$/;"	l
+uartPRIMARY_PRIORITY	FreeRTOSConfig.h	87;"	d
+vApplicationIdleHook	main.c	/^void vApplicationIdleHook( void )$/;"	f
+vApplicationMallocFailedHook	main.c	/^void vApplicationMallocFailedHook( void )$/;"	f
+vApplicationStackOverflowHook	main.c	/^void vApplicationStackOverflowHook( TaskHandle_t pxTask, char *pcTaskName )$/;"	f
+vApplicationTickHook	main.c	/^void vApplicationTickHook( void )$/;"	f
+vAssertCalled	main.c	/^void vAssertCalled( void )$/;"	f
+vOutNS16550	ns16550.c	/^void vOutNS16550( struct device *dev, unsigned char c )$/;"	f
+vSendString	riscv-virt.c	/^void vSendString( const char *s )$/;"	f
+writeb	ns16550.c	/^static void writeb( uint8_t b, uintptr_t addr )$/;"	f	file:
+xGetCoreID	riscv-virt.c	/^int xGetCoreID( void )$/;"	f
+xQueue	main_blinky.c	/^static QueueHandle_t xQueue = NULL;$/;"	v	file:
