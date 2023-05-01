@@ -13,7 +13,7 @@ Archive member included to satisfy reference by file (symbol)
 /home/halip/x-tools/riscv64-unknown-elf/lib/gcc/riscv64-unknown-elf/12.2.0/../../../../riscv64-unknown-elf/lib/libc.a(lib_a-strcmp.o)
                               build//home/halip/projects/my_diplom/demo_src/Minimal/TimerDemo.o (strcmp)
 /home/halip/x-tools/riscv64-unknown-elf/lib/gcc/riscv64-unknown-elf/12.2.0/../../../../riscv64-unknown-elf/lib/libc.a(lib_a-strlen.o)
-                              build/riscv-virt.o (strlen)
+                              build//home/halip/projects/my_diplom/src_FreeRtos/tasks.o (strlen)
 /home/halip/x-tools/riscv64-unknown-elf/lib/gcc/riscv64-unknown-elf/12.2.0/../../../../riscv64-unknown-elf/lib/libc.a(lib_a-svfprintf.o)
                               /home/halip/x-tools/riscv64-unknown-elf/lib/gcc/riscv64-unknown-elf/12.2.0/../../../../riscv64-unknown-elf/lib/libc.a(lib_a-sprintf.o) (_svfprintf_r)
 /home/halip/x-tools/riscv64-unknown-elf/lib/gcc/riscv64-unknown-elf/12.2.0/../../../../riscv64-unknown-elf/lib/libc.a(lib_a-impure.o)
@@ -59,6 +59,11 @@ Discarded input sections
  .text          0x00000000        0x0 build/ns16550.o
  .data          0x00000000        0x0 build/ns16550.o
  .bss           0x00000000        0x0 build/ns16550.o
+ .text.vOutNS16550
+                0x00000000       0x14 build/ns16550.o
+ .comment       0x00000000       0x35 build/ns16550.o
+ .riscv.attributes
+                0x00000000       0x3d build/ns16550.o
  .text          0x00000000        0x0 build//home/halip/projects/my_diplom/demo_src/Minimal/EventGroupsDemo.o
  .data          0x00000000        0x0 build//home/halip/projects/my_diplom/demo_src/Minimal/EventGroupsDemo.o
  .bss           0x00000000        0x0 build//home/halip/projects/my_diplom/demo_src/Minimal/EventGroupsDemo.o
@@ -676,7 +681,7 @@ LOAD /home/halip/x-tools/riscv64-unknown-elf/lib/gcc/riscv64-unknown-elf/12.2.0/
  .init          0x80000000       0x76 build/start.o
                 0x80000000                _start
 
-.text           0x80000100     0x4794
+.text           0x80000100     0x4694
  *(.text.unlikely .text.unlikely.*)
  *(.text.startup .text.startup.*)
  .text.startup.main
@@ -706,235 +711,232 @@ LOAD /home/halip/x-tools/riscv64-unknown-elf/lib/gcc/riscv64-unknown-elf/12.2.0/
                 0x800002c8        0x6 build/riscv-virt.o
                 0x800002c8                xGetCoreID
  .text.vSendString
-                0x800002ce       0x66 build/riscv-virt.o
+                0x800002ce       0x24 build/riscv-virt.o
                 0x800002ce                vSendString
- .text.vOutNS16550
-                0x80000334       0x14 build/ns16550.o
-                0x80000334                vOutNS16550
  .text.vListInitialise
-                0x80000348       0x14 build//home/halip/projects/my_diplom/src_FreeRtos/list.o
-                0x80000348                vListInitialise
+                0x800002f2       0x14 build//home/halip/projects/my_diplom/src_FreeRtos/list.o
+                0x800002f2                vListInitialise
  .text.vListInitialiseItem
-                0x8000035c        0x6 build//home/halip/projects/my_diplom/src_FreeRtos/list.o
-                0x8000035c                vListInitialiseItem
+                0x80000306        0x6 build//home/halip/projects/my_diplom/src_FreeRtos/list.o
+                0x80000306                vListInitialiseItem
  .text.vListInsert
-                0x80000362       0x2e build//home/halip/projects/my_diplom/src_FreeRtos/list.o
-                0x80000362                vListInsert
+                0x8000030c       0x2e build//home/halip/projects/my_diplom/src_FreeRtos/list.o
+                0x8000030c                vListInsert
  .text.uxListRemove
-                0x80000390       0x2e build//home/halip/projects/my_diplom/src_FreeRtos/list.o
-                0x80000390                uxListRemove
+                0x8000033a       0x2e build//home/halip/projects/my_diplom/src_FreeRtos/list.o
+                0x8000033a                uxListRemove
  .text.prvCopyDataToQueue
-                0x800003be       0x96 build//home/halip/projects/my_diplom/src_FreeRtos/queue.o
+                0x80000368       0x96 build//home/halip/projects/my_diplom/src_FreeRtos/queue.o
  .text.prvUnlockQueue
-                0x80000454       0xf8 build//home/halip/projects/my_diplom/src_FreeRtos/queue.o
+                0x800003fe       0xf8 build//home/halip/projects/my_diplom/src_FreeRtos/queue.o
  .text.xQueueGenericReset
-                0x8000054c       0xa4 build//home/halip/projects/my_diplom/src_FreeRtos/queue.o
-                0x8000054c                xQueueGenericReset
+                0x800004f6       0xa4 build//home/halip/projects/my_diplom/src_FreeRtos/queue.o
+                0x800004f6                xQueueGenericReset
  .text.xQueueGenericCreate
-                0x800005f0       0x7c build//home/halip/projects/my_diplom/src_FreeRtos/queue.o
-                0x800005f0                xQueueGenericCreate
+                0x8000059a       0x7c build//home/halip/projects/my_diplom/src_FreeRtos/queue.o
+                0x8000059a                xQueueGenericCreate
  .text.xQueueGenericSend
-                0x8000066c      0x18c build//home/halip/projects/my_diplom/src_FreeRtos/queue.o
-                0x8000066c                xQueueGenericSend
+                0x80000616      0x18c build//home/halip/projects/my_diplom/src_FreeRtos/queue.o
+                0x80000616                xQueueGenericSend
  .text.xQueueReceive
-                0x800007f8      0x19e build//home/halip/projects/my_diplom/src_FreeRtos/queue.o
-                0x800007f8                xQueueReceive
+                0x800007a2      0x19e build//home/halip/projects/my_diplom/src_FreeRtos/queue.o
+                0x800007a2                xQueueReceive
  .text.vQueueAddToRegistry
-                0x80000996       0x5c build//home/halip/projects/my_diplom/src_FreeRtos/queue.o
-                0x80000996                vQueueAddToRegistry
+                0x80000940       0x5c build//home/halip/projects/my_diplom/src_FreeRtos/queue.o
+                0x80000940                vQueueAddToRegistry
  .text.vQueueWaitForMessageRestricted
-                0x800009f2       0x64 build//home/halip/projects/my_diplom/src_FreeRtos/queue.o
-                0x800009f2                vQueueWaitForMessageRestricted
+                0x8000099c       0x64 build//home/halip/projects/my_diplom/src_FreeRtos/queue.o
+                0x8000099c                vQueueWaitForMessageRestricted
  .text.prvAddCurrentTaskToDelayedList
-                0x80000a56       0xec build//home/halip/projects/my_diplom/src_FreeRtos/tasks.o
+                0x80000a00       0xec build//home/halip/projects/my_diplom/src_FreeRtos/tasks.o
  .text.prvIdleTask
-                0x80000b42       0x7c build//home/halip/projects/my_diplom/src_FreeRtos/tasks.o
+                0x80000aec       0x7c build//home/halip/projects/my_diplom/src_FreeRtos/tasks.o
  .text.xTaskIncrementTick.part.0
-                0x80000bbe      0x1ba build//home/halip/projects/my_diplom/src_FreeRtos/tasks.o
+                0x80000b68      0x1ba build//home/halip/projects/my_diplom/src_FreeRtos/tasks.o
  .text.xTaskCreate
-                0x80000d78      0x24e build//home/halip/projects/my_diplom/src_FreeRtos/tasks.o
-                0x80000d78                xTaskCreate
+                0x80000d22      0x24e build//home/halip/projects/my_diplom/src_FreeRtos/tasks.o
+                0x80000d22                xTaskCreate
  .text.vTaskStartScheduler
-                0x80000fc6       0x84 build//home/halip/projects/my_diplom/src_FreeRtos/tasks.o
-                0x80000fc6                vTaskStartScheduler
+                0x80000f70       0x84 build//home/halip/projects/my_diplom/src_FreeRtos/tasks.o
+                0x80000f70                vTaskStartScheduler
  .text.vTaskSuspendAll
-                0x8000104a       0x10 build//home/halip/projects/my_diplom/src_FreeRtos/tasks.o
-                0x8000104a                vTaskSuspendAll
+                0x80000ff4       0x10 build//home/halip/projects/my_diplom/src_FreeRtos/tasks.o
+                0x80000ff4                vTaskSuspendAll
  .text.xTaskResumeAll
-                0x8000105a      0x1b8 build//home/halip/projects/my_diplom/src_FreeRtos/tasks.o
-                0x8000105a                xTaskResumeAll
+                0x80001004      0x1b8 build//home/halip/projects/my_diplom/src_FreeRtos/tasks.o
+                0x80001004                xTaskResumeAll
  .text.xTaskDelayUntil
-                0x80001212       0x88 build//home/halip/projects/my_diplom/src_FreeRtos/tasks.o
-                0x80001212                xTaskDelayUntil
+                0x800011bc       0x88 build//home/halip/projects/my_diplom/src_FreeRtos/tasks.o
+                0x800011bc                xTaskDelayUntil
  .text.xTaskGetTickCount
-                0x8000129a        0xa build//home/halip/projects/my_diplom/src_FreeRtos/tasks.o
-                0x8000129a                xTaskGetTickCount
+                0x80001244        0xa build//home/halip/projects/my_diplom/src_FreeRtos/tasks.o
+                0x80001244                xTaskGetTickCount
  .text.pcTaskGetName
-                0x800012a4       0x28 build//home/halip/projects/my_diplom/src_FreeRtos/tasks.o
-                0x800012a4                pcTaskGetName
+                0x8000124e       0x28 build//home/halip/projects/my_diplom/src_FreeRtos/tasks.o
+                0x8000124e                pcTaskGetName
  .text.xTaskIncrementTick
-                0x800012cc       0x2c build//home/halip/projects/my_diplom/src_FreeRtos/tasks.o
-                0x800012cc                xTaskIncrementTick
+                0x80001276       0x2c build//home/halip/projects/my_diplom/src_FreeRtos/tasks.o
+                0x80001276                xTaskIncrementTick
  .text.vTaskSwitchContext
-                0x800012f8       0xcc build//home/halip/projects/my_diplom/src_FreeRtos/tasks.o
-                0x800012f8                vTaskSwitchContext
+                0x800012a2       0xcc build//home/halip/projects/my_diplom/src_FreeRtos/tasks.o
+                0x800012a2                vTaskSwitchContext
  .text.vTaskPlaceOnEventList
-                0x800013c4       0x30 build//home/halip/projects/my_diplom/src_FreeRtos/tasks.o
-                0x800013c4                vTaskPlaceOnEventList
+                0x8000136e       0x30 build//home/halip/projects/my_diplom/src_FreeRtos/tasks.o
+                0x8000136e                vTaskPlaceOnEventList
  .text.vTaskPlaceOnEventListRestricted
-                0x800013f4       0x64 build//home/halip/projects/my_diplom/src_FreeRtos/tasks.o
-                0x800013f4                vTaskPlaceOnEventListRestricted
+                0x8000139e       0x64 build//home/halip/projects/my_diplom/src_FreeRtos/tasks.o
+                0x8000139e                vTaskPlaceOnEventListRestricted
  .text.xTaskRemoveFromEventList
-                0x80001458       0xde build//home/halip/projects/my_diplom/src_FreeRtos/tasks.o
-                0x80001458                xTaskRemoveFromEventList
+                0x80001402       0xde build//home/halip/projects/my_diplom/src_FreeRtos/tasks.o
+                0x80001402                xTaskRemoveFromEventList
  .text.vTaskInternalSetTimeOutState
-                0x80001536       0x16 build//home/halip/projects/my_diplom/src_FreeRtos/tasks.o
-                0x80001536                vTaskInternalSetTimeOutState
+                0x800014e0       0x16 build//home/halip/projects/my_diplom/src_FreeRtos/tasks.o
+                0x800014e0                vTaskInternalSetTimeOutState
  .text.xTaskCheckForTimeOut
-                0x8000154c       0xaa build//home/halip/projects/my_diplom/src_FreeRtos/tasks.o
-                0x8000154c                xTaskCheckForTimeOut
+                0x800014f6       0xaa build//home/halip/projects/my_diplom/src_FreeRtos/tasks.o
+                0x800014f6                xTaskCheckForTimeOut
  .text.vTaskMissedYield
-                0x800015f6        0xc build//home/halip/projects/my_diplom/src_FreeRtos/tasks.o
-                0x800015f6                vTaskMissedYield
+                0x800015a0        0xc build//home/halip/projects/my_diplom/src_FreeRtos/tasks.o
+                0x800015a0                vTaskMissedYield
  .text.xTaskGetCurrentTaskHandle
-                0x80001602        0xa build//home/halip/projects/my_diplom/src_FreeRtos/tasks.o
-                0x80001602                xTaskGetCurrentTaskHandle
+                0x800015ac        0xa build//home/halip/projects/my_diplom/src_FreeRtos/tasks.o
+                0x800015ac                xTaskGetCurrentTaskHandle
  .text.xTaskGetSchedulerState
-                0x8000160c       0x1c build//home/halip/projects/my_diplom/src_FreeRtos/tasks.o
-                0x8000160c                xTaskGetSchedulerState
+                0x800015b6       0x1c build//home/halip/projects/my_diplom/src_FreeRtos/tasks.o
+                0x800015b6                xTaskGetSchedulerState
  .text.xTaskPriorityDisinherit
-                0x80001628       0xc4 build//home/halip/projects/my_diplom/src_FreeRtos/tasks.o
-                0x80001628                xTaskPriorityDisinherit
+                0x800015d2       0xc4 build//home/halip/projects/my_diplom/src_FreeRtos/tasks.o
+                0x800015d2                xTaskPriorityDisinherit
  .text.prvCheckForValidListAndQueue
-                0x800016ec       0x82 build//home/halip/projects/my_diplom/src_FreeRtos/timers.o
+                0x80001696       0x82 build//home/halip/projects/my_diplom/src_FreeRtos/timers.o
  .text.prvProcessExpiredTimer
-                0x8000176e       0x94 build//home/halip/projects/my_diplom/src_FreeRtos/timers.o
+                0x80001718       0x94 build//home/halip/projects/my_diplom/src_FreeRtos/timers.o
  .text.prvTimerTask
-                0x80001802      0x242 build//home/halip/projects/my_diplom/src_FreeRtos/timers.o
+                0x800017ac      0x242 build//home/halip/projects/my_diplom/src_FreeRtos/timers.o
  .text.xTimerCreateTimerTask
-                0x80001a44       0x42 build//home/halip/projects/my_diplom/src_FreeRtos/timers.o
-                0x80001a44                xTimerCreateTimerTask
+                0x800019ee       0x42 build//home/halip/projects/my_diplom/src_FreeRtos/timers.o
+                0x800019ee                xTimerCreateTimerTask
  .text.prvInsertBlockIntoFreeList
-                0x80001a86       0x56 build//home/halip/projects/my_diplom/src_FreeRtos/portable/MemMang/heap_4.o
+                0x80001a30       0x56 build//home/halip/projects/my_diplom/src_FreeRtos/portable/MemMang/heap_4.o
  .text.pvPortMalloc
-                0x80001adc      0x166 build//home/halip/projects/my_diplom/src_FreeRtos/portable/MemMang/heap_4.o
-                0x80001adc                pvPortMalloc
+                0x80001a86      0x166 build//home/halip/projects/my_diplom/src_FreeRtos/portable/MemMang/heap_4.o
+                0x80001a86                pvPortMalloc
  .text.vPortFree
-                0x80001c42       0x84 build//home/halip/projects/my_diplom/src_FreeRtos/portable/MemMang/heap_4.o
-                0x80001c42                vPortFree
+                0x80001bec       0x84 build//home/halip/projects/my_diplom/src_FreeRtos/portable/MemMang/heap_4.o
+                0x80001bec                vPortFree
  .text.vPortSetupTimerInterrupt
-                0x80001cc6       0x5e build//home/halip/projects/my_diplom/src_FreeRtos/portable/GCC/RISC-V/port.o
-                0x80001cc6                vPortSetupTimerInterrupt
+                0x80001c70       0x5e build//home/halip/projects/my_diplom/src_FreeRtos/portable/GCC/RISC-V/port.o
+                0x80001c70                vPortSetupTimerInterrupt
  .text.xPortStartScheduler
-                0x80001d24       0x2a build//home/halip/projects/my_diplom/src_FreeRtos/portable/GCC/RISC-V/port.o
-                0x80001d24                xPortStartScheduler
- .text          0x80001d4e       0xc2 build//home/halip/projects/my_diplom/src_FreeRtos/portable/GCC/RISC-V/portASM.o
-                0x80001d4e                pxPortInitialiseStack
-                0x80001d96                xPortStartFirstTask
-                0x80001df4                freertos_risc_v_application_exception_handler
-                0x80001e02                freertos_risc_v_application_interrupt_handler
- *fill*         0x80001e10       0xf0 
+                0x80001cce       0x2a build//home/halip/projects/my_diplom/src_FreeRtos/portable/GCC/RISC-V/port.o
+                0x80001cce                xPortStartScheduler
+ .text          0x80001cf8       0xc2 build//home/halip/projects/my_diplom/src_FreeRtos/portable/GCC/RISC-V/portASM.o
+                0x80001cf8                pxPortInitialiseStack
+                0x80001d40                xPortStartFirstTask
+                0x80001d9e                freertos_risc_v_application_exception_handler
+                0x80001dac                freertos_risc_v_application_interrupt_handler
+ *fill*         0x80001dba       0x46 
  .text.freertos_risc_v_trap_handler
-                0x80001f00      0x1da build//home/halip/projects/my_diplom/src_FreeRtos/portable/GCC/RISC-V/portASM.o
-                0x80001f00                freertos_risc_v_trap_handler
- *fill*         0x800020da        0x2 
- .text          0x800020dc       0x4c /home/halip/x-tools/riscv64-unknown-elf/lib/gcc/riscv64-unknown-elf/12.2.0/libgcc.a(_clzsi2.o)
-                0x800020dc                __clzsi2
- .text          0x80002128       0x24 /home/halip/x-tools/riscv64-unknown-elf/lib/gcc/riscv64-unknown-elf/12.2.0/../../../../riscv64-unknown-elf/lib/libc.a(lib_a-memcpy-asm.o)
-                0x80002128                memcpy
- .text          0x8000214c       0x1c /home/halip/x-tools/riscv64-unknown-elf/lib/gcc/riscv64-unknown-elf/12.2.0/../../../../riscv64-unknown-elf/lib/libc.a(lib_a-memset.o)
-                0x8000214c                memset
- .text          0x80002168       0xd4 /home/halip/x-tools/riscv64-unknown-elf/lib/gcc/riscv64-unknown-elf/12.2.0/../../../../riscv64-unknown-elf/lib/libc.a(lib_a-sprintf.o)
-                0x80002168                _sprintf_r
-                0x800021cc                sprintf
- .text          0x8000223c       0x1c /home/halip/x-tools/riscv64-unknown-elf/lib/gcc/riscv64-unknown-elf/12.2.0/../../../../riscv64-unknown-elf/lib/libc.a(lib_a-strlen.o)
-                0x8000223c                strlen
- .text          0x80002258      0x9dc /home/halip/x-tools/riscv64-unknown-elf/lib/gcc/riscv64-unknown-elf/12.2.0/../../../../riscv64-unknown-elf/lib/libc.a(lib_a-svfprintf.o)
-                0x80002258                _svfprintf_r
- .text          0x80002c34      0x6a4 /home/halip/x-tools/riscv64-unknown-elf/lib/gcc/riscv64-unknown-elf/12.2.0/../../../../riscv64-unknown-elf/lib/libc.a(lib_a-mallocr.o)
-                0x80002c34                _malloc_r
- .text          0x800032d8       0x24 /home/halip/x-tools/riscv64-unknown-elf/lib/gcc/riscv64-unknown-elf/12.2.0/../../../../riscv64-unknown-elf/lib/libc.a(lib_a-memchr.o)
-                0x800032d8                memchr
- .text          0x800032fc        0x8 /home/halip/x-tools/riscv64-unknown-elf/lib/gcc/riscv64-unknown-elf/12.2.0/../../../../riscv64-unknown-elf/lib/libc.a(lib_a-mlock.o)
-                0x800032fc                __malloc_lock
-                0x80003300                __malloc_unlock
- .text          0x80003304       0x4c /home/halip/x-tools/riscv64-unknown-elf/lib/gcc/riscv64-unknown-elf/12.2.0/../../../../riscv64-unknown-elf/lib/libc.a(lib_a-sbrkr.o)
-                0x80003304                _sbrk_r
- .text          0x80003350      0xba0 /home/halip/x-tools/riscv64-unknown-elf/lib/gcc/riscv64-unknown-elf/12.2.0/../../../../riscv64-unknown-elf/lib/libc.a(lib_a-svfiprintf.o)
-                0x80003350                __ssprint_r
-                0x80003514                _svfiprintf_r
- .text          0x80003ef0      0x388 /home/halip/x-tools/riscv64-unknown-elf/lib/gcc/riscv64-unknown-elf/12.2.0/../../../../riscv64-unknown-elf/lib/libc.a(lib_a-freer.o)
-                0x80003ef0                _malloc_trim_r
-                0x80004010                _free_r
- .text          0x80004278       0x3c /home/halip/x-tools/riscv64-unknown-elf/lib/gcc/riscv64-unknown-elf/12.2.0/../../../../riscv64-unknown-elf/lib/libc.a(lib_a-memmove.o)
-                0x80004278                memmove
- .text          0x800042b4      0x568 /home/halip/x-tools/riscv64-unknown-elf/lib/gcc/riscv64-unknown-elf/12.2.0/../../../../riscv64-unknown-elf/lib/libc.a(lib_a-reallocr.o)
-                0x800042b4                _realloc_r
- .text          0x8000481c       0x70 /home/halip/x-tools/riscv64-unknown-elf/lib/gcc/riscv64-unknown-elf/12.2.0/../../../../riscv64-unknown-elf/lib/libgloss.a(sys_sbrk.o)
-                0x8000481c                _sbrk
- .text          0x8000488c        0x8 /home/halip/x-tools/riscv64-unknown-elf/lib/gcc/riscv64-unknown-elf/12.2.0/../../../../riscv64-unknown-elf/lib/libc.a(lib_a-errno.o)
-                0x8000488c                __errno
+                0x80001e00      0x1da build//home/halip/projects/my_diplom/src_FreeRtos/portable/GCC/RISC-V/portASM.o
+                0x80001e00                freertos_risc_v_trap_handler
+ *fill*         0x80001fda        0x2 
+ .text          0x80001fdc       0x4c /home/halip/x-tools/riscv64-unknown-elf/lib/gcc/riscv64-unknown-elf/12.2.0/libgcc.a(_clzsi2.o)
+                0x80001fdc                __clzsi2
+ .text          0x80002028       0x24 /home/halip/x-tools/riscv64-unknown-elf/lib/gcc/riscv64-unknown-elf/12.2.0/../../../../riscv64-unknown-elf/lib/libc.a(lib_a-memcpy-asm.o)
+                0x80002028                memcpy
+ .text          0x8000204c       0x1c /home/halip/x-tools/riscv64-unknown-elf/lib/gcc/riscv64-unknown-elf/12.2.0/../../../../riscv64-unknown-elf/lib/libc.a(lib_a-memset.o)
+                0x8000204c                memset
+ .text          0x80002068       0xd4 /home/halip/x-tools/riscv64-unknown-elf/lib/gcc/riscv64-unknown-elf/12.2.0/../../../../riscv64-unknown-elf/lib/libc.a(lib_a-sprintf.o)
+                0x80002068                _sprintf_r
+                0x800020cc                sprintf
+ .text          0x8000213c       0x1c /home/halip/x-tools/riscv64-unknown-elf/lib/gcc/riscv64-unknown-elf/12.2.0/../../../../riscv64-unknown-elf/lib/libc.a(lib_a-strlen.o)
+                0x8000213c                strlen
+ .text          0x80002158      0x9dc /home/halip/x-tools/riscv64-unknown-elf/lib/gcc/riscv64-unknown-elf/12.2.0/../../../../riscv64-unknown-elf/lib/libc.a(lib_a-svfprintf.o)
+                0x80002158                _svfprintf_r
+ .text          0x80002b34      0x6a4 /home/halip/x-tools/riscv64-unknown-elf/lib/gcc/riscv64-unknown-elf/12.2.0/../../../../riscv64-unknown-elf/lib/libc.a(lib_a-mallocr.o)
+                0x80002b34                _malloc_r
+ .text          0x800031d8       0x24 /home/halip/x-tools/riscv64-unknown-elf/lib/gcc/riscv64-unknown-elf/12.2.0/../../../../riscv64-unknown-elf/lib/libc.a(lib_a-memchr.o)
+                0x800031d8                memchr
+ .text          0x800031fc        0x8 /home/halip/x-tools/riscv64-unknown-elf/lib/gcc/riscv64-unknown-elf/12.2.0/../../../../riscv64-unknown-elf/lib/libc.a(lib_a-mlock.o)
+                0x800031fc                __malloc_lock
+                0x80003200                __malloc_unlock
+ .text          0x80003204       0x4c /home/halip/x-tools/riscv64-unknown-elf/lib/gcc/riscv64-unknown-elf/12.2.0/../../../../riscv64-unknown-elf/lib/libc.a(lib_a-sbrkr.o)
+                0x80003204                _sbrk_r
+ .text          0x80003250      0xba0 /home/halip/x-tools/riscv64-unknown-elf/lib/gcc/riscv64-unknown-elf/12.2.0/../../../../riscv64-unknown-elf/lib/libc.a(lib_a-svfiprintf.o)
+                0x80003250                __ssprint_r
+                0x80003414                _svfiprintf_r
+ .text          0x80003df0      0x388 /home/halip/x-tools/riscv64-unknown-elf/lib/gcc/riscv64-unknown-elf/12.2.0/../../../../riscv64-unknown-elf/lib/libc.a(lib_a-freer.o)
+                0x80003df0                _malloc_trim_r
+                0x80003f10                _free_r
+ .text          0x80004178       0x3c /home/halip/x-tools/riscv64-unknown-elf/lib/gcc/riscv64-unknown-elf/12.2.0/../../../../riscv64-unknown-elf/lib/libc.a(lib_a-memmove.o)
+                0x80004178                memmove
+ .text          0x800041b4      0x568 /home/halip/x-tools/riscv64-unknown-elf/lib/gcc/riscv64-unknown-elf/12.2.0/../../../../riscv64-unknown-elf/lib/libc.a(lib_a-reallocr.o)
+                0x800041b4                _realloc_r
+ .text          0x8000471c       0x70 /home/halip/x-tools/riscv64-unknown-elf/lib/gcc/riscv64-unknown-elf/12.2.0/../../../../riscv64-unknown-elf/lib/libgloss.a(sys_sbrk.o)
+                0x8000471c                _sbrk
+ .text          0x8000478c        0x8 /home/halip/x-tools/riscv64-unknown-elf/lib/gcc/riscv64-unknown-elf/12.2.0/../../../../riscv64-unknown-elf/lib/libc.a(lib_a-errno.o)
+                0x8000478c                __errno
  *(.gnu.linkonce.t.*)
 
-.fini           0x80004894        0x0
+.fini           0x80004794        0x0
  *(SORT_NONE(.fini))
-                0x80004894                        _etext = .
+                0x80004794                        _etext = .
 
-.rodata.align   0x80004894        0x0
-                0x80004894                        . = ALIGN (0x4)
-                0x80004894                        _rodata = .
+.rodata.align   0x80004794        0x0
+                0x80004794                        . = ALIGN (0x4)
+                0x80004794                        _rodata = .
 
-.rodata.start   0x80004894        0x0
-                0x80004894                        _rodata_lma = LOADADDR (.rodata.start)
+.rodata.start   0x80004794        0x0
+                0x80004794                        _rodata_lma = LOADADDR (.rodata.start)
 
-.rodata         0x80004894      0x430
+.rodata         0x80004794      0x430
  *(.rdata)
  *(.rodata .rodata.*)
  .rodata.vAssertCalled.str1.4
-                0x80004894       0x10 build/main.o
+                0x80004794       0x10 build/main.o
  .rodata.prvQueueSendTask.str1.4
-                0x800048a4       0x23 build/main_blinky.o
- *fill*         0x800048c7        0x1 
+                0x800047a4       0x23 build/main_blinky.o
+ *fill*         0x800047c7        0x1 
  .rodata.prvQueueReceiveTask.str1.4
-                0x800048c8       0x2c build/main_blinky.o
+                0x800047c8       0x2c build/main_blinky.o
  .rodata.main_blinky.str1.4
-                0x800048f4        0x7 build/main_blinky.o
+                0x800047f4        0x7 build/main_blinky.o
                                  0x17 (size before relaxing)
- *fill*         0x800048fb        0x1 
+ *fill*         0x800047fb        0x1 
  .rodata.vTaskStartScheduler.str1.4
-                0x800048fc        0x5 build//home/halip/projects/my_diplom/src_FreeRtos/tasks.o
- *fill*         0x80004901        0x3 
+                0x800047fc        0x5 build//home/halip/projects/my_diplom/src_FreeRtos/tasks.o
+ *fill*         0x80004801        0x3 
  .rodata.prvCheckForValidListAndQueue.str1.4
-                0x80004904        0x5 build//home/halip/projects/my_diplom/src_FreeRtos/timers.o
- *fill*         0x80004909        0x3 
+                0x80004804        0x5 build//home/halip/projects/my_diplom/src_FreeRtos/timers.o
+ *fill*         0x80004809        0x3 
  .rodata.prvTimerTask
-                0x8000490c       0x28 build//home/halip/projects/my_diplom/src_FreeRtos/timers.o
+                0x8000480c       0x28 build//home/halip/projects/my_diplom/src_FreeRtos/timers.o
  .rodata.xTimerCreateTimerTask.str1.4
-                0x80004934        0x8 build//home/halip/projects/my_diplom/src_FreeRtos/timers.o
- .rodata        0x8000493c      0x100 /home/halip/x-tools/riscv64-unknown-elf/lib/gcc/riscv64-unknown-elf/12.2.0/libgcc.a(_clz.o)
-                0x8000493c                __clz_tab
+                0x80004834        0x8 build//home/halip/projects/my_diplom/src_FreeRtos/timers.o
+ .rodata        0x8000483c      0x100 /home/halip/x-tools/riscv64-unknown-elf/lib/gcc/riscv64-unknown-elf/12.2.0/libgcc.a(_clz.o)
+                0x8000483c                __clz_tab
  .rodata.str1.4
-                0x80004a3c       0x25 /home/halip/x-tools/riscv64-unknown-elf/lib/gcc/riscv64-unknown-elf/12.2.0/../../../../riscv64-unknown-elf/lib/libc.a(lib_a-svfprintf.o)
- *fill*         0x80004a61        0x3 
- .rodata        0x80004a64      0x130 /home/halip/x-tools/riscv64-unknown-elf/lib/gcc/riscv64-unknown-elf/12.2.0/../../../../riscv64-unknown-elf/lib/libc.a(lib_a-svfprintf.o)
+                0x8000493c       0x25 /home/halip/x-tools/riscv64-unknown-elf/lib/gcc/riscv64-unknown-elf/12.2.0/../../../../riscv64-unknown-elf/lib/libc.a(lib_a-svfprintf.o)
+ *fill*         0x80004961        0x3 
+ .rodata        0x80004964      0x130 /home/halip/x-tools/riscv64-unknown-elf/lib/gcc/riscv64-unknown-elf/12.2.0/../../../../riscv64-unknown-elf/lib/libc.a(lib_a-svfprintf.o)
  .rodata.str1.4
-                0x80004b94       0x25 /home/halip/x-tools/riscv64-unknown-elf/lib/gcc/riscv64-unknown-elf/12.2.0/../../../../riscv64-unknown-elf/lib/libc.a(lib_a-svfiprintf.o)
- .rodata        0x80004b94      0x130 /home/halip/x-tools/riscv64-unknown-elf/lib/gcc/riscv64-unknown-elf/12.2.0/../../../../riscv64-unknown-elf/lib/libc.a(lib_a-svfiprintf.o)
+                0x80004a94       0x25 /home/halip/x-tools/riscv64-unknown-elf/lib/gcc/riscv64-unknown-elf/12.2.0/../../../../riscv64-unknown-elf/lib/libc.a(lib_a-svfiprintf.o)
+ .rodata        0x80004a94      0x130 /home/halip/x-tools/riscv64-unknown-elf/lib/gcc/riscv64-unknown-elf/12.2.0/../../../../riscv64-unknown-elf/lib/libc.a(lib_a-svfiprintf.o)
  *(.gnu.linkonce.r.*)
-                0x80004cc4                        . = ALIGN (0x4)
-                0x80004cc4                        _erodata = .
+                0x80004bc4                        . = ALIGN (0x4)
+                0x80004bc4                        _erodata = .
 
-.rela.dyn       0x80004cc4        0x0
- .rela.init     0x80004cc4        0x0 build/main.o
+.rela.dyn       0x80004bc4        0x0
+ .rela.init     0x80004bc4        0x0 build/main.o
 
-.data.align     0x80080000        0x0 load address 0x80004cc4
+.data.align     0x80080000        0x0 load address 0x80004bc4
                 0x80080000                        . = ALIGN (0x4)
                 0x80080000                        _data = .
 
-.data.start     0x80080000        0x0 load address 0x80004cc4
-                0x80004cc4                        _data_lma = LOADADDR (.data.start)
+.data.start     0x80080000        0x0 load address 0x80004bc4
+                0x80004bc4                        _data_lma = LOADADDR (.data.start)
 
-.data           0x80080000      0x858 load address 0x80004cc4
+.data           0x80080000      0x858 load address 0x80004bc4
  *(.data .data.*)
  .data          0x80080000      0x428 /home/halip/x-tools/riscv64-unknown-elf/lib/gcc/riscv64-unknown-elf/12.2.0/../../../../riscv64-unknown-elf/lib/libc.a(lib_a-impure.o)
  .data          0x80080428      0x408 /home/halip/x-tools/riscv64-unknown-elf/lib/gcc/riscv64-unknown-elf/12.2.0/../../../../riscv64-unknown-elf/lib/libc.a(lib_a-mallocr.o)
@@ -978,14 +980,14 @@ LOAD /home/halip/x-tools/riscv64-unknown-elf/lib/gcc/riscv64-unknown-elf/12.2.0/
                 0x80080858                        . = ALIGN (0x4)
                 0x80080858                        _edata = .
 
-.bss.align      0x80080858        0x0 load address 0x8000551c
+.bss.align      0x80080858        0x0 load address 0x8000541c
                 0x80080858                        . = ALIGN (0x4)
                 0x80080858                        _bss = .
 
-.bss.start      0x80080858        0x0 load address 0x8000551c
-                0x8000551c                        _bss_lma = LOADADDR (.bss.start)
+.bss.start      0x80080858        0x0 load address 0x8000541c
+                0x8000541c                        _bss_lma = LOADADDR (.bss.start)
 
-.bss            0x80080860    0x11e08 load address 0x8000551c
+.bss            0x80080860    0x11e08 load address 0x8000541c
  *(.sbss*)
  .sbss.xQueue   0x80080860        0x4 build/main_blinky.o
  .sbss.uxSchedulerSuspended
@@ -1101,7 +1103,6 @@ OUTPUT(build/RTOSDemo.axf elf32-littleriscv)
                                  0x35 (size before relaxing)
  .comment       0x00000034       0x35 build/main_blinky.o
  .comment       0x00000034       0x35 build/riscv-virt.o
- .comment       0x00000034       0x35 build/ns16550.o
  .comment       0x00000034       0x35 build//home/halip/projects/my_diplom/src_FreeRtos/list.o
  .comment       0x00000034       0x35 build//home/halip/projects/my_diplom/src_FreeRtos/queue.o
  .comment       0x00000034       0x35 build//home/halip/projects/my_diplom/src_FreeRtos/tasks.o
@@ -1134,61 +1135,59 @@ OUTPUT(build/RTOSDemo.axf elf32-littleriscv)
  .riscv.attributes
                 0x0000007e       0x41 build/riscv-virt.o
  .riscv.attributes
-                0x000000bf       0x3d build/ns16550.o
+                0x000000bf       0x3d build//home/halip/projects/my_diplom/src_FreeRtos/list.o
  .riscv.attributes
-                0x000000fc       0x3d build//home/halip/projects/my_diplom/src_FreeRtos/list.o
+                0x000000fc       0x41 build//home/halip/projects/my_diplom/src_FreeRtos/queue.o
  .riscv.attributes
-                0x00000139       0x41 build//home/halip/projects/my_diplom/src_FreeRtos/queue.o
+                0x0000013d       0x41 build//home/halip/projects/my_diplom/src_FreeRtos/tasks.o
  .riscv.attributes
-                0x0000017a       0x41 build//home/halip/projects/my_diplom/src_FreeRtos/tasks.o
+                0x0000017e       0x41 build//home/halip/projects/my_diplom/src_FreeRtos/timers.o
  .riscv.attributes
-                0x000001bb       0x41 build//home/halip/projects/my_diplom/src_FreeRtos/timers.o
+                0x000001bf       0x41 build//home/halip/projects/my_diplom/src_FreeRtos/portable/MemMang/heap_4.o
  .riscv.attributes
-                0x000001fc       0x41 build//home/halip/projects/my_diplom/src_FreeRtos/portable/MemMang/heap_4.o
+                0x00000200       0x41 build//home/halip/projects/my_diplom/src_FreeRtos/portable/GCC/RISC-V/port.o
  .riscv.attributes
-                0x0000023d       0x41 build//home/halip/projects/my_diplom/src_FreeRtos/portable/GCC/RISC-V/port.o
+                0x00000241       0x3f build/start.o
  .riscv.attributes
-                0x0000027e       0x3f build/start.o
+                0x00000280       0x3f build//home/halip/projects/my_diplom/src_FreeRtos/portable/GCC/RISC-V/portASM.o
  .riscv.attributes
-                0x000002bd       0x3f build//home/halip/projects/my_diplom/src_FreeRtos/portable/GCC/RISC-V/portASM.o
+                0x000002bf       0x38 /home/halip/x-tools/riscv64-unknown-elf/lib/gcc/riscv64-unknown-elf/12.2.0/libgcc.a(_clzsi2.o)
  .riscv.attributes
-                0x000002fc       0x38 /home/halip/x-tools/riscv64-unknown-elf/lib/gcc/riscv64-unknown-elf/12.2.0/libgcc.a(_clzsi2.o)
+                0x000002f7       0x38 /home/halip/x-tools/riscv64-unknown-elf/lib/gcc/riscv64-unknown-elf/12.2.0/libgcc.a(_clz.o)
  .riscv.attributes
-                0x00000334       0x38 /home/halip/x-tools/riscv64-unknown-elf/lib/gcc/riscv64-unknown-elf/12.2.0/libgcc.a(_clz.o)
+                0x0000032f       0x36 /home/halip/x-tools/riscv64-unknown-elf/lib/gcc/riscv64-unknown-elf/12.2.0/../../../../riscv64-unknown-elf/lib/libc.a(lib_a-memcpy-asm.o)
  .riscv.attributes
-                0x0000036c       0x36 /home/halip/x-tools/riscv64-unknown-elf/lib/gcc/riscv64-unknown-elf/12.2.0/../../../../riscv64-unknown-elf/lib/libc.a(lib_a-memcpy-asm.o)
+                0x00000365       0x36 /home/halip/x-tools/riscv64-unknown-elf/lib/gcc/riscv64-unknown-elf/12.2.0/../../../../riscv64-unknown-elf/lib/libc.a(lib_a-memset.o)
  .riscv.attributes
-                0x000003a2       0x36 /home/halip/x-tools/riscv64-unknown-elf/lib/gcc/riscv64-unknown-elf/12.2.0/../../../../riscv64-unknown-elf/lib/libc.a(lib_a-memset.o)
+                0x0000039b       0x38 /home/halip/x-tools/riscv64-unknown-elf/lib/gcc/riscv64-unknown-elf/12.2.0/../../../../riscv64-unknown-elf/lib/libc.a(lib_a-sprintf.o)
  .riscv.attributes
-                0x000003d8       0x38 /home/halip/x-tools/riscv64-unknown-elf/lib/gcc/riscv64-unknown-elf/12.2.0/../../../../riscv64-unknown-elf/lib/libc.a(lib_a-sprintf.o)
+                0x000003d3       0x38 /home/halip/x-tools/riscv64-unknown-elf/lib/gcc/riscv64-unknown-elf/12.2.0/../../../../riscv64-unknown-elf/lib/libc.a(lib_a-strlen.o)
  .riscv.attributes
-                0x00000410       0x38 /home/halip/x-tools/riscv64-unknown-elf/lib/gcc/riscv64-unknown-elf/12.2.0/../../../../riscv64-unknown-elf/lib/libc.a(lib_a-strlen.o)
+                0x0000040b       0x38 /home/halip/x-tools/riscv64-unknown-elf/lib/gcc/riscv64-unknown-elf/12.2.0/../../../../riscv64-unknown-elf/lib/libc.a(lib_a-svfprintf.o)
  .riscv.attributes
-                0x00000448       0x38 /home/halip/x-tools/riscv64-unknown-elf/lib/gcc/riscv64-unknown-elf/12.2.0/../../../../riscv64-unknown-elf/lib/libc.a(lib_a-svfprintf.o)
+                0x00000443       0x38 /home/halip/x-tools/riscv64-unknown-elf/lib/gcc/riscv64-unknown-elf/12.2.0/../../../../riscv64-unknown-elf/lib/libc.a(lib_a-impure.o)
  .riscv.attributes
-                0x00000480       0x38 /home/halip/x-tools/riscv64-unknown-elf/lib/gcc/riscv64-unknown-elf/12.2.0/../../../../riscv64-unknown-elf/lib/libc.a(lib_a-impure.o)
+                0x0000047b       0x38 /home/halip/x-tools/riscv64-unknown-elf/lib/gcc/riscv64-unknown-elf/12.2.0/../../../../riscv64-unknown-elf/lib/libc.a(lib_a-mallocr.o)
  .riscv.attributes
-                0x000004b8       0x38 /home/halip/x-tools/riscv64-unknown-elf/lib/gcc/riscv64-unknown-elf/12.2.0/../../../../riscv64-unknown-elf/lib/libc.a(lib_a-mallocr.o)
+                0x000004b3       0x38 /home/halip/x-tools/riscv64-unknown-elf/lib/gcc/riscv64-unknown-elf/12.2.0/../../../../riscv64-unknown-elf/lib/libc.a(lib_a-memchr.o)
  .riscv.attributes
-                0x000004f0       0x38 /home/halip/x-tools/riscv64-unknown-elf/lib/gcc/riscv64-unknown-elf/12.2.0/../../../../riscv64-unknown-elf/lib/libc.a(lib_a-memchr.o)
+                0x000004eb       0x38 /home/halip/x-tools/riscv64-unknown-elf/lib/gcc/riscv64-unknown-elf/12.2.0/../../../../riscv64-unknown-elf/lib/libc.a(lib_a-mlock.o)
  .riscv.attributes
-                0x00000528       0x38 /home/halip/x-tools/riscv64-unknown-elf/lib/gcc/riscv64-unknown-elf/12.2.0/../../../../riscv64-unknown-elf/lib/libc.a(lib_a-mlock.o)
+                0x00000523       0x38 /home/halip/x-tools/riscv64-unknown-elf/lib/gcc/riscv64-unknown-elf/12.2.0/../../../../riscv64-unknown-elf/lib/libc.a(lib_a-sbrkr.o)
  .riscv.attributes
-                0x00000560       0x38 /home/halip/x-tools/riscv64-unknown-elf/lib/gcc/riscv64-unknown-elf/12.2.0/../../../../riscv64-unknown-elf/lib/libc.a(lib_a-sbrkr.o)
+                0x0000055b       0x38 /home/halip/x-tools/riscv64-unknown-elf/lib/gcc/riscv64-unknown-elf/12.2.0/../../../../riscv64-unknown-elf/lib/libc.a(lib_a-svfiprintf.o)
  .riscv.attributes
-                0x00000598       0x38 /home/halip/x-tools/riscv64-unknown-elf/lib/gcc/riscv64-unknown-elf/12.2.0/../../../../riscv64-unknown-elf/lib/libc.a(lib_a-svfiprintf.o)
+                0x00000593       0x38 /home/halip/x-tools/riscv64-unknown-elf/lib/gcc/riscv64-unknown-elf/12.2.0/../../../../riscv64-unknown-elf/lib/libc.a(lib_a-freer.o)
  .riscv.attributes
-                0x000005d0       0x38 /home/halip/x-tools/riscv64-unknown-elf/lib/gcc/riscv64-unknown-elf/12.2.0/../../../../riscv64-unknown-elf/lib/libc.a(lib_a-freer.o)
+                0x000005cb       0x36 /home/halip/x-tools/riscv64-unknown-elf/lib/gcc/riscv64-unknown-elf/12.2.0/../../../../riscv64-unknown-elf/lib/libc.a(lib_a-memmove.o)
  .riscv.attributes
-                0x00000608       0x36 /home/halip/x-tools/riscv64-unknown-elf/lib/gcc/riscv64-unknown-elf/12.2.0/../../../../riscv64-unknown-elf/lib/libc.a(lib_a-memmove.o)
+                0x00000601       0x38 /home/halip/x-tools/riscv64-unknown-elf/lib/gcc/riscv64-unknown-elf/12.2.0/../../../../riscv64-unknown-elf/lib/libc.a(lib_a-reallocr.o)
  .riscv.attributes
-                0x0000063e       0x38 /home/halip/x-tools/riscv64-unknown-elf/lib/gcc/riscv64-unknown-elf/12.2.0/../../../../riscv64-unknown-elf/lib/libc.a(lib_a-reallocr.o)
+                0x00000639       0x38 /home/halip/x-tools/riscv64-unknown-elf/lib/gcc/riscv64-unknown-elf/12.2.0/../../../../riscv64-unknown-elf/lib/libc.a(lib_a-reent.o)
  .riscv.attributes
-                0x00000676       0x38 /home/halip/x-tools/riscv64-unknown-elf/lib/gcc/riscv64-unknown-elf/12.2.0/../../../../riscv64-unknown-elf/lib/libc.a(lib_a-reent.o)
+                0x00000671       0x38 /home/halip/x-tools/riscv64-unknown-elf/lib/gcc/riscv64-unknown-elf/12.2.0/../../../../riscv64-unknown-elf/lib/libgloss.a(sys_sbrk.o)
  .riscv.attributes
-                0x000006ae       0x38 /home/halip/x-tools/riscv64-unknown-elf/lib/gcc/riscv64-unknown-elf/12.2.0/../../../../riscv64-unknown-elf/lib/libgloss.a(sys_sbrk.o)
- .riscv.attributes
-                0x000006e6       0x38 /home/halip/x-tools/riscv64-unknown-elf/lib/gcc/riscv64-unknown-elf/12.2.0/../../../../riscv64-unknown-elf/lib/libc.a(lib_a-errno.o)
+                0x000006a9       0x38 /home/halip/x-tools/riscv64-unknown-elf/lib/gcc/riscv64-unknown-elf/12.2.0/../../../../riscv64-unknown-elf/lib/libc.a(lib_a-errno.o)
 
 .debug_info     0x00000000     0x8a52
  .debug_info    0x00000000      0x142 /home/halip/x-tools/riscv64-unknown-elf/lib/gcc/riscv64-unknown-elf/12.2.0/libgcc.a(_clzsi2.o)

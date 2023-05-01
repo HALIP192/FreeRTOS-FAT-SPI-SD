@@ -40,21 +40,43 @@ int id;
 	return id;
 }
 
+
+#define UART_REG_TXFIFO 0x00
+#ifdef __ASSEMBLER__
+#define _AC(X,Y)  X
+#else
+#define _AC(X,Y) (X##Y)
+#endif
+#define UART0_CTRL_ADDR _AC(0x10010000,UL)
+#define _REG32(p, i) (*(volatile uint32_t *) ((p) + (i)))
+#define UART0_REG(offset) _REG32(UART0_CTRL_ADDR, offset)
+
 void vSendString( const char *s )
 {
-struct device dev;
-size_t i;
 
-	dev.addr = NS16550_ADDR;
+	const uint32_t ulTxFifoFullBit = 0x80000000UL;
 
-	portENTER_CRITICAL();
-
-	for (i = 0; i < strlen(s); i++) {
-		vOutNS16550( &dev, s[i] );
+	while (*s != 0x00) {
+		const uint32_t reg_TxFifo = UART0_REG(UART_REG_TXFIFO);
+		const uint32_t reg_TxFifo_mult = reg_TxFifo & ulTxFifoFullBit;
+		while ( reg_TxFifo_mult != 0UL);
+		UART0_REG(UART_REG_TXFIFO) = *s;
+		s++;
 	}
-	vOutNS16550( &dev, '\n' );
+	UART0_REG(UART_REG_TXFIFO) = '\n';
+/* struct device dev; */
+/* size_t i; */
 
-	portEXIT_CRITICAL();
+/* 	dev.addr = NS16550_ADDR; */
+
+/* 	portENTER_CRITICAL(); */
+
+/* 	for (i = 0; i < strlen(s); i++) { */
+/* 		vOutNS16550( &dev, s[i] ); */
+/* 	} */
+/* 	vOutNS16550( &dev, '\n' ); */
+
+/* 	portEXIT_CRITICAL(); */
 }
 
 void handle_trap(void)
