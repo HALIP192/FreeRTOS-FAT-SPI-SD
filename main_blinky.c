@@ -33,6 +33,7 @@
 
 #include "riscv-virt.h"
 #include "ns16550.h"
+#include "platform.h"
 
 /* Priorities used by the tasks. */
 #define mainQUEUE_RECEIVE_TASK_PRIORITY		( tskIDLE_PRIORITY + 2 )
@@ -73,13 +74,11 @@ int f = 1;
 
 	for( ;; )
 	{
-		char buf[40];
+		vSendString( "Try1" );
+		struct spi_ctrl *try = ((struct spi_ctrl *) SPI_CTRL_ADDR);
+		spi_tx(try, 5);
+		vSendString( "Try2" );
 
-		sprintf( buf, "%d: %s: %s", xGetCoreID(),
-				pcTaskGetName( xTaskGetCurrentTaskHandle() ),
-				( f ) ? pcMessage1 : pcMessage2 );
-		vSendString( buf );
-		f = !f;
 
 		/* Place this task in the blocked state until it is time to run again. */
 		vTaskDelayUntil( &xNextWakeTime, mainQUEUE_SEND_FREQUENCY_MS );
@@ -147,8 +146,8 @@ int main_blinky( void )
 	{
 		/* Start the two tasks as described in the comments at the top of this
 		file. */
-		xTaskCreate( prvQueueReceiveTask, "Rx", configMINIMAL_STACK_SIZE * 2U, NULL,
-					mainQUEUE_RECEIVE_TASK_PRIORITY, NULL );
+		/* xTaskCreate( prvQueueReceiveTask, "Rx", configMINIMAL_STACK_SIZE * 2U, NULL, */
+		/* 			mainQUEUE_RECEIVE_TASK_PRIORITY, NULL ); */
 		xTaskCreate( prvQueueSendTask, "Tx", configMINIMAL_STACK_SIZE * 2U, NULL,
 					mainQUEUE_SEND_TASK_PRIORITY, NULL );
 	}

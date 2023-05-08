@@ -30,6 +30,7 @@
 
 #include "riscv-virt.h"
 #include "ns16550.h"
+#include "platform.h"
 
 int xGetCoreID( void )
 {
