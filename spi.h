@@ -227,8 +227,26 @@ uint8_t spi_txrx(spi_ctrl* spictrl, uint8_t in);
 int spi_copy(spi_ctrl* spictrl, void* buf, uint32_t addr, uint32_t size);
 
 
-void spi_tx(spi_ctrl* spictrl, uint8_t in);
-
+inline unsigned int spi_min_clk_divisor(unsigned int input_khz, unsigned int max_target_khz)
+{
+  // f_sck = f_in / (2 * (div + 1)) => div = (f_in / (2*f_sck)) - 1
+  //
+  // The nearest integer solution for div requires rounding up as to not exceed
+  // max_target_khz.
+  //
+  // div = ceil(f_in / (2*f_sck)) - 1
+  //     = floor((f_in - 1 + 2*f_sck) / (2*f_sck)) - 1
+  //
+  // This should not overflow as long as (f_in - 1 + 2*f_sck) does not exceed
+  // 2^32 - 1, which is unlikely since we represent frequencies in kHz.
+  unsigned int quotient = (input_khz + 2 * max_target_khz - 1) / (2 * max_target_khz);
+  // Avoid underflow
+  if (quotient == 0) {
+    return 0;
+  } else {
+    return quotient - 1;
+  }
+}
 #endif /* !__ASSEMBLER__ */
 
 #endif

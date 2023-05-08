@@ -34,6 +34,7 @@
 #include "riscv-virt.h"
 #include "ns16550.h"
 #include "platform.h"
+#include "spi.h"
 
 /* Priorities used by the tasks. */
 #define mainQUEUE_RECEIVE_TASK_PRIORITY		( tskIDLE_PRIORITY + 2 )
@@ -74,8 +75,7 @@ int f = 1;
 
 	for( ;; )
 	{
-		vSendString( "Try1" );
-		struct spi_ctrl *try = ((struct spi_ctrl *) SPI_CTRL_ADDR);
+		spi_ctrl *try = ((volatile struct spi_ctrl *) SPI_CTRL_ADDR);
 		spi_tx(try, 5);
 		vSendString( "Try2" );
 
