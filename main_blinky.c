@@ -35,6 +35,7 @@
 #include "ns16550.h"
 #include "platform.h"
 #include "spi.h"
+#include "sd.h"
 
 /* Priorities used by the tasks. */
 #define mainQUEUE_RECEIVE_TASK_PRIORITY		( tskIDLE_PRIORITY + 2 )
@@ -59,6 +60,8 @@ static QueueHandle_t xQueue = NULL;
 
 /*-----------------------------------------------------------*/
 
+static int init_sd = 0;
+
 static void prvQueueSendTask( void *pvParameters )
 {
 TickType_t xNextWakeTime;
@@ -76,7 +79,8 @@ int f = 1;
 	for( ;; )
 	{
 		spi_ctrl *try = ((volatile struct spi_ctrl *) SPI_CTRL_ADDR);
-		spi_tx(try, 5);
+		sd_init(try, 800, init_sd);
+		init_sd = 1;
 		vSendString( "Try2" );
 
 

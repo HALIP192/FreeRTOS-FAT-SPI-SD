@@ -18,6 +18,13 @@ void spi_tx(spi_ctrl* spictrl, uint8_t in)
 #endif
 }
 
+uint8_t spi_rx(spi_ctrl* spictrl)
+{
+  int32_t out;
+  while ((out = (int32_t) spictrl->rxdata.raw_bits) < 0);
+  return (uint8_t) out;
+}
+
 /**
  * Transmit a byte and receive a byte.
  */

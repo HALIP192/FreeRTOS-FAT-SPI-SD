@@ -1,6 +1,8 @@
 #ifndef __PLATFORM_H__
 #define __PLATFORM_H__
 
+#include "riscv-virt.h"
+
 #ifdef __ASSEMBLER__
 #define _AC(X,Y)  X
 #else
@@ -13,7 +15,7 @@
 #define UART0_CTRL_ADDR _AC(0x10010000,UL)
 #define UART0_REG(offset) _REG32(UART0_CTRL_ADDR, offset)
 
-#define SPI_CTRL_ADDR _AC(0x10040000,UL)
+#define SPI_CTRL_ADDR _AC(0x10050000,UL)
 #define SPI_CTRL_SIZE _AC(0x1000,UL)
 #define SPI_MEM_ADDR  _AC(0x20000000,UL)
 #define SPI_MEM_SIZE  _AC(0x10000000,UL)
@@ -31,6 +33,13 @@
 
 #define SPI_ENDIAN_MSB          0
 #define SPI_ENDIAN_LSB          1
+
+
+#define RTC_PERIOD_NS _AC(1000,UL)
+
+
+#define CLINT_CTRL_ADDR _AC(0x2000000,UL)
+#define CLINT_REG(offset) _REG32(CLINT_CTRL_ADDR, offset)
 
 
 #endif
